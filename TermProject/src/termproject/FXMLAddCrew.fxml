@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="termproject.FXMLDocumentController">
+   <children>
+      <Label layoutX="234.0" layoutY="20.0" text="Add Crew">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCrewDetails" layoutX="107.0" layoutY="371.0" mnemonicParsing="false" onAction="#handleCrewDetailsAction" text="Crew Details" />
+      <Label layoutX="119.0" layoutY="75.0" text="First Name" />
+      <Label layoutX="120.0" layoutY="112.0" text="Last Name" />
+      <Label layoutX="107.0" layoutY="149.0" text="Date of Birth" />
+      <Label layoutX="131.0" layoutY="192.0" text="Phone" />
+      <TextField fx:id="txtFirstName" layoutX="198.0" layoutY="71.0" />
+      <TextField fx:id="txtLastname" layoutX="198.0" layoutY="108.0" />
+      <DatePicker fx:id="txtDob" layoutX="198.0" layoutY="145.0" />
+      <Label layoutX="134.0" layoutY="233.0" text="Email" />
+      <Label layoutX="129.0" layoutY="276.0" text="Gender" />
+      <TextField fx:id="txtPhone" layoutX="198.0" layoutY="188.0" />
+      <TextField fx:id="txtEmail" layoutX="198.0" layoutY="229.0" />
+      <Button fx:id="btnSave" layoutX="214.0" layoutY="371.0" mnemonicParsing="false" onAction="#handleSaveAction" text="Save" />
+      <Button fx:id="btnNewCrewReset" layoutX="278.0" layoutY="371.0" mnemonicParsing="false" text="Reset" />
+      <Label layoutX="123.0" layoutY="318.0" text="Password" />
+      <PasswordField fx:id="txtAddCrewPassword" layoutX="198.0" layoutY="314.0" />
+      <TextField fx:id="txtGender" layoutX="198.0" layoutY="272.0" />
+   </children>
+</AnchorPane>
