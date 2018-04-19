@@ -8,23 +8,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="429.0" prefWidth="617.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="termproject.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="370.0" prefWidth="588.0" style="-fx-background-color: #F0EDE5#F0EDE5;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="termproject.FXMLDocumentController">
    <children>
-      <Label layoutX="226.0" layoutY="25.0" text="Work Order">
+      <TextField fx:id="txtWorkOrderName" layoutX="157.0" layoutY="84.0" prefHeight="27.0" prefWidth="194.0" />
+      <DatePicker fx:id="datePickerStartDate" layoutX="157.0" layoutY="125.0" />
+      <DatePicker fx:id="datePickerEndDate" layoutX="157.0" layoutY="170.0" />
+      <TextArea fx:id="txtAreaSummary" layoutX="158.0" layoutY="210.0" prefHeight="98.0" prefWidth="200.0" />
+      <TextField fx:id="txtProgress" layoutX="158.0" layoutY="317.0" prefHeight="27.0" prefWidth="200.0" />
+      <Button fx:id="btnWorkOrderSave" layoutX="415.0" layoutY="317.0" mnemonicParsing="false" onAction="#handleWorkOrderSaveAction" prefHeight="27.0" prefWidth="89.0" text="Save" />
+      <Button fx:id="btnWorkOrderCrewDetail" layoutX="415.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleCrewDetailsAction" text="Crew Detail" />
+      <Button fx:id="btnWorkOrderLogout" layoutX="415.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleLogoutButtonAction" prefHeight="27.0" prefWidth="89.0" text="Logout" />
+      <Label fx:id="labelworkOrder" layoutX="37.0" layoutY="13.0" text="Work Order">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnWorkOrderLogout" layoutX="330.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleLogoutButtonAction" text="Logout" />
-      <DatePicker fx:id="datePickerStartDate" layoutX="226.0" layoutY="77.0" />
-      <DatePicker fx:id="datePickerEndDate" layoutX="226.0" layoutY="126.0" />
-      <Label layoutX="143.0" layoutY="81.0" text="Start Date" />
-      <Label layoutX="143.0" layoutY="130.0" text="End Date" />
-      <TextArea fx:id="txtAreaSummary" layoutX="226.0" layoutY="215.0" prefHeight="98.0" prefWidth="200.0" />
-      <Label layoutX="134.0" layoutY="215.0" text="Summary" />
-      <Label layoutX="150.0" layoutY="338.0" text="Progress" />
-      <TextField fx:id="txtProgress" layoutX="226.0" layoutY="334.0" />
-      <Button fx:id="btnWorkOrderCrewDetail" layoutX="226.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleCrewDetailsAction" text="Crew Detail" />
+      <Label layoutX="81.0" layoutY="130.0" text="Start Date" />
+      <Label layoutX="84.0" layoutY="175.0" text="End Date" />
+      <Label layoutX="83.0" layoutY="235.0" text="Summary" />
+      <Label layoutX="85.0" layoutY="322.0" text="Progress" />
+      <TextField fx:id="txtInstance" editable="false" layoutX="403.0" layoutY="13.0" />
+      <Label layoutX="320.0" layoutY="18.0" text="User Name" />
+      <Label layoutX="27.0" layoutY="89.0" text="Work Order Name" />
+      <TextField fx:id="txtID" editable="false" layoutX="240.0" layoutY="13.0" prefHeight="27.0" prefWidth="61.0" />
+      <Label layoutX="173.0" layoutY="18.0" text="Crew ID" />
+      <TextField fx:id="txtWOWorkID" editable="false" layoutX="403.0" layoutY="49.0" />
+      <Label layoutX="351.0" layoutY="54.0" text="Work ID" />
    </children>
 </AnchorPane>

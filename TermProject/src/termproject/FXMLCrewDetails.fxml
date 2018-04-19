@@ -5,21 +5,30 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="termproject.FXMLDocumentController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1189.0" style="-fx-background-color: #F0EDE5#F0EDE5;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="termproject.FXMLDocumentController">
    <children>
-      <TableView layoutX="13.0" layoutY="12.0" prefHeight="324.0" prefWidth="570.0">
+      <TableView fx:id="tableView" layoutX="24.0" layoutY="88.0" prefHeight="455.0" prefWidth="1165.0">
         <columns>
-          <TableColumn fx:id="columnLogin" prefWidth="75.0" text=" Login ID" />
-          <TableColumn fx:id="columnCrewName" prefWidth="88.0" text="Crew Name" />
-            <TableColumn fx:id="ColumnTitle" prefWidth="97.0" text="Title" />
-            <TableColumn fx:id="ColumnDob" prefWidth="110.0" text="Date of Birth" />
-            <TableColumn prefWidth="103.0" text="Work Order" />
-            <TableColumn fx:id="ColumnProgress" prefWidth="93.0" text="Progress" />
+            <TableColumn fx:id="columnCrewID" prefWidth="57.0" text="CrewID" />
+          <TableColumn fx:id="columnLastName" prefWidth="75.0" text="Last Name" />
+          <TableColumn fx:id="columnFirstName" prefWidth="81.0" text="First Name" />
+            <TableColumn fx:id="columnTitle" prefWidth="93.0" text="Title" />
+            <TableColumn fx:id="columnWorkID" prefWidth="67.0" text="WorkID" />
+            <TableColumn fx:id="columnWO" prefWidth="83.0" text="Work Order" />
+            <TableColumn fx:id="columnProgress" prefWidth="78.0" text="Progress" />
+            <TableColumn fx:id="columnStart" prefWidth="110.0" text="Start" />
+            <TableColumn fx:id="columnEnd" prefWidth="109.0" text="End" />
+            <TableColumn fx:id="columnSummary" prefWidth="288.0" text="Summary" />
+            <TableColumn fx:id="columnStatus" prefWidth="121.0" text="Status" />
         </columns>
       </TableView>
-      <Button fx:id="btnShowDetail" layoutX="242.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleShowDetailAction" text="Show Detail" />
-      <Button fx:id="btnLogout" layoutX="431.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleLogoutButtonAction" text="Logout" />
-      <Button fx:id="btnAddCrew" layoutX="138.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleNewCrewButtonAction" text="Add Crew" />
-      <Button fx:id="btnShowList" layoutX="341.0" layoutY="348.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Show List" />
+      <Button fx:id="btnLogout" layoutX="789.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleLogoutButtonAction" text="Logout" />
+      <Button fx:id="btnAddCrew" layoutX="256.0" layoutY="557.0" mnemonicParsing="false" onAction="#handleNewCrewButtonAction" text="Add Crew" />
+      <Button fx:id="btnShowList" layoutX="44.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleShowListAction" prefHeight="27.0" prefWidth="79.0" text="Show List" />
+      <Button fx:id="btnCreate" layoutX="350.0" layoutY="557.0" mnemonicParsing="false" onAction="#handleCreateWorkOrderAction" prefHeight="27.0" prefWidth="87.0" text="Create WO" />
+      <Button fx:id="btnChart" layoutX="139.0" layoutY="27.0" mnemonicParsing="false" onAction="#handlePieChartAction" text="Stats" />
+      <Button fx:id="btnRemove" layoutX="454.0" layoutY="557.0" mnemonicParsing="false" onAction="#handleRemoveAction" prefHeight="27.0" prefWidth="79.0" text="Hide" />
+      <Button fx:id="btnDelete" layoutX="549.0" layoutY="557.0" mnemonicParsing="false" onAction="#handleDeleteWOButtonAction" text="Delete WO" />
+      <Button fx:id="btnDeleteCrew" layoutX="657.0" layoutY="557.0" mnemonicParsing="false" onAction="#handleDeleteCrewButtonAction" text="Delete Crew" />
    </children>
 </AnchorPane>

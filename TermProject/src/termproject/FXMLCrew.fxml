@@ -2,16 +2,35 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="333.0" prefWidth="501.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="termproject.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="673.0" style="-fx-background-color: #F0EDE5#F0EDE5;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="termproject.FXMLDocumentController">
    <children>
-      <Label layoutX="212.0" layoutY="28.0" text="Crew">
+      <Label layoutX="270.0" layoutY="14.0" text="Crew ID">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btnCrewLogout" layoutX="206.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLogoutButtonAction" text="Logout" />
+      <Button fx:id="btnCrewLogout" layoutX="51.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutButtonAction" prefHeight="27.0" prefWidth="85.0" text="Logout" />
+      <Button fx:id="btnMyTask" layoutX="52.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleMyTaskButtonAction" text="Show Task" />
+      <TextField fx:id="txtCrewID" editable="false" layoutX="363.0" layoutY="12.0" />
+      <Label layoutX="250.0" layoutY="57.0" text="User Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCrewUserName" editable="false" layoutX="363.0" layoutY="55.0" />
+      <TableView fx:id="tableCrew" editable="true" layoutX="14.0" layoutY="111.0" prefHeight="279.0" prefWidth="639.0">
+        <columns>
+          <TableColumn fx:id="columnCrewWorkOrder" editable="false" prefWidth="95.0" text="Work Order" />
+            <TableColumn fx:id="columnCrewProgress" prefWidth="82.0" text="Progress" />
+            <TableColumn fx:id="columnCrewSummary" editable="false" prefWidth="348.0" text="Summary" />
+            <TableColumn fx:id="columnWOStatus" prefWidth="112.0" text="Status" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
